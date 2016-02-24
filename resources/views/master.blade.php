@@ -2,7 +2,7 @@
 <html>
      <head>
           <title>@yield('title', 'Home Page')</title>
-          <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
           @section('style')
           <link rel="stylesheet" href="{{ URL::asset('assets/css/materialize.min.css') }}" edia="screen,projection">
           <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
@@ -10,20 +10,20 @@
      </head>
 <body>     
      <div id="banner-id">
-          <ul id="dropdown1" class="dropdown-content">
+          <!-- <ul id="dropdown1" class="dropdown-content">
                <li><a href="#!">New Voter</a></li>
                <li class="divider"></li>
                <li><a href="#!">two</a></li>
                <li class="divider"></li>
                <li><a href="#!">three</a></li>
-          </ul>   
+          </ul>    -->
           <nav>
                <div class="nav-wrapper teal lighten-1">
                     <a href="#" class="brand-logo">Logo</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
                          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons left">notifications</i>Notification<i class="material-icons right">arrow_drop_down</i></a></li>
                          <li><a href="sass.html"><i class="material-icons left">dashboard</i>Dashboard</a></li>
-                    </ul>
+                    </ul>  -->    
                </div>
           </nav>
      </div>
@@ -36,7 +36,7 @@
                                    <img src="{{ URL::asset('assets/img/prof.png') }}" alt="" class="circle responsive-img valign profile-image" style="height:100px;width:100px;margin-top:15px;margin-left:43px;">
                               </div>
                               <div class="col s12">
-                                   <h6 class="user-roal" style="font-family:segoe ui">&emsp;&emsp;&emsp;Administrator</h6>
+                                   <h6 class="user-roal">&emsp;&emsp;&emsp;Administrator</h6>
                                    <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"  style="margin-top:10px;margin-right:10px;">&emsp;Melody<i class="mdi-navigation-arrow-drop-down right"></i></a>
                                    <ul id="profile-dropdown" class="dropdown-content active" style="width: 128px; position: absolute; top: 80px; left: 100.859px;  display: block;">  
                                         <li>
@@ -56,9 +56,9 @@
                               <li ><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-social-person-add "></i> Members<i class="material-icons right mdi-navigation-arrow-drop-down"></i></a>
                                    <div class="collapsible-body" style="">
                                         <ul>
-                                             <li><a href="memberform.php" ><i class="mdi-action-account-circle" ></i>&emsp; Members Info.</a>
+                                             <li><a href="/m" ><i class="mdi-action-account-circle" ></i>&emsp; Create Form</a>
                                              </li>                                          
-                                             <li><a href="readform.php"><i class="mdi-av-my-library-books"></i>&emsp; Members Form</a>
+                                             <li><a href="readform.php"><i class="mdi-av-my-library-books"></i>&emsp; Profile</a>
                                              </li>
                                         </ul>
                                    </div>

@@ -74,7 +74,7 @@
 
 			$('.form-element').unbind();
 
-			// Form element clicked
+			//Form element clicked
 			$('.form-element').click(function(){
 
 				// Remove selected class from all elements
@@ -82,11 +82,21 @@
 
 				// Add selected class to selected element
 				$(this).addClass('selected');
+				// alert($(this).data('type'));
 
 				// View the settings base on element type
 				if( $(this).data('type') == 'form-settings' ) {
 					
 					tabs.showTab('#form-settings');
+
+				} else if( $(this).data('type') == 'element-single-line-text-default' ){
+			
+					alert("Can't edit required default fields.");
+					tabs.showTab('#add-field');
+					//currentlySelected = $(this);
+					// bindSettings();
+					// repositionToolbox();
+					// isFieldOptions();
 
 				} else {
 					
@@ -95,6 +105,7 @@
 					bindSettings();
 					repositionToolbox();
 					isFieldOptions();
+
 				}
 
 			});
@@ -119,18 +130,18 @@
 				if( $(this).data('target') == '#field-settings' ) {
 					
 					if(!currentlySelected){
-						$('#element-0').addClass('selected');
-						currentlySelected = $('#element-0');
+						// $('#element-0').addClass('selected');
+						// currentlySelected = $('#element-0');
+						if ($('#element-0').data('type') == 'element-single-line-text-default') {
+							alert("Please choose a field to set.");
+						}		
 					} else {
 						currentlySelected.addClass('selected');
 					}
-
 					bindSettings();
 					repositionToolbox();
 				}
-
 			});
-
 		}
 
 
@@ -159,7 +170,6 @@
 						if( currentlySelected.data('type') != 'element-dropdown' ) {
 							currentlySelected.find(target).next('.choice-label').html($(this).val());
 						} else {
-
 							currentlySelected.find(target).html($(this).val());
 						}
 						
@@ -338,14 +348,14 @@
 				
 				if( currentlySelected != '' ) {
 					
-					if( $('.form-element').length > 2 ) {
+					if( $('.form-element').length > 4 ) {
 						currentlySelected.remove();
 						reorderElements();
 						tabs.showTab('#add-field');
-						
 						clearSelectedElements();
+						currentlySelected = " ";
 					} else {
-						alert('Unable to delete this field! You must have at least 1 field in your form.');
+						alert('Unable to delete this field! You must have at least 3 field in your form.');
 					}
 	
 				}

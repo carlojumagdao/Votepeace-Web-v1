@@ -113,7 +113,7 @@
       <div class="right-col" id="form-col">
 
         <div class="loading">
-          Loading...
+          <h1>Loading...</h1>
         </div>
 
       </div>

@@ -11,6 +11,21 @@
 
           {#fields}
 
+            <!-- Single Line Text Default-->
+
+            {@eq key="{type}" value="element-single-line-text-default"} 
+
+
+              <li class="form-element {#required}required{/required}" id="element-{position}" data-label="{title}" data-position="{position}" data-type="element-single-line-text-default">
+                <label>
+                  <span class="label-title">{title}</span>
+                  {#required}<span class="required-star"> *</span>{/required}
+                </label>
+                <input type="text" class="form-control" value="" disabled />
+              </li>
+
+            {/eq}
+
             <!-- Single Line Text -->
 
             {@eq key="{type}" value="element-single-line-text"} 
