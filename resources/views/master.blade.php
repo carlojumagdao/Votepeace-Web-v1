@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
      <head>
-          <!--Import Google Icon Font-->
+          <title>@yield('title', 'Home Page')</title>
           <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           @section('style')
           <link rel="stylesheet" href="{{ URL::asset('assets/css/materialize.min.css') }}" edia="screen,projection">
@@ -33,7 +33,7 @@
                     <li class="user-details cyan darken-2">
                          <div class="row" >
                               <div class="col s12" >
-                                   <img src="img/prof.png" alt="" class="circle responsive-img valign profile-image" style="height:100px;width:100px;margin-top:15px;margin-left:43px;">
+                                   <img src="{{ URL::asset('assets/img/prof.png') }}" alt="" class="circle responsive-img valign profile-image" style="height:100px;width:100px;margin-top:15px;margin-left:43px;">
                               </div>
                               <div class="col s12">
                                    <h6 class="user-roal" style="font-family:segoe ui">&emsp;&emsp;&emsp;Administrator</h6>
@@ -128,15 +128,7 @@
      <div>
           @yield('content')
      </div>
-
-     <script>
-     $(document).ready(function(){
-          $('.collapsible').collapsible({
-          accordion : true
-          });
-     });
-     </script>
-     <script> $(".dropdown-button").dropdown();</script>
+     
      <script src="{{ URL::asset('assets/js/jquery/dist/jquery-2.1.1.min.js') }}"></script>
      <script src="{{ URL::asset('assets/js/materialize.min.js') }}"></script>
      <script src="{{ URL::asset('assets/js/jquery/dist/jquery.min.js') }}"></script>

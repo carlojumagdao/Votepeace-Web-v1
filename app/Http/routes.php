@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('master');
 });
+Route::get('/m', function () {
+    return view('pages.memberform');
+});
